@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="./css/api.css" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+</head>
+<body>
+
+</body>
+<script type="text/javascript" src="./script/api.js"></script>
+<script type="text/javascript">
+	function isIos() {
+		var userAgent = navigator.userAgent;
+		if(userAgent.indexOf('iPhone') > -1 || userAgent.indexOf('iPad') > -1 || userAgent.indexOf('Mac') > -1){
+			return true;
+		}
+		return false;
+	}
+    apiready = function(){
+        api.setStatusBarStyle({
+            style: 'light'
+        });
+
+
+
+        var scaleEnabled = false;
+        if(api.systemType == 'ios'){
+            scaleEnabled = true;
+        }
+        api.openFrame({
+            name: 'main',
+            url: 'https://waimai.youqidao.top/addons/we7_wmall/template/deliveryer/index.html?menu=#/pages/order/takeout?i=1',
+            showProgress: false,
+            bounces: false,
+            opaque: true,
+
+            scaleEnabled: scaleEnabled,
+            rect: {
+                x: 0,
+                y: 0,
+                w: api.winWidth,
+                h: api.winHeight
+            }
+        });
+
+        api.addEventListener({
+            name: 'keyback'
+        }, function(ret, err){
+            var js = 'api.historyBack(function(ret, err){if(!ret.status){api.closeWidget();}});';
+            api.execScript({
+                frameName: 'main',
+                script: js
+            });
+        });
+
+    };
+</script>
+</html>

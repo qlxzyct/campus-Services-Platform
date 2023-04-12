@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget id="A6156592215975" security="true" version="1.1.0">
+<name>配送</name>
+<description>配送</description>
+       <author email="" href="https://waimai.youqidao.top">配送</author>
+       <content src="index.html"/>
+       <preference name="windowBackground" value=""/><!--企鹅382178535 提供支持-->
+       <preference name="autoLaunch" value="true"/>
+       <preference name="autoUpdate" value="true"/>
+       <preference name="smartUpdate" value="false"/>
+       <preference name="backgroundMode" value="location"/>
+       <preference name="urlScheme" value="iosamap"/>
+       <preference name="querySchemes" value="iosamap"/>
+       <preference name="pageBounce" value="false"/>
+       <preference name="hScrollBarEnabled" value="false"/>
+       <preference name="vScrollBarEnabled" value="false"/>
+       <preference name="fullScreen" value="false"/>
+       <preference name="iOS7StatusBarAppearance" value="false"/>
+       <preference name="appBackground" value="#FFF"/>
+       <preference name="userAgent" value="DLALAWAIMAI"/>
+	     <preference name="autoUpdate" value="true"/>
+       <preference name="checkSslTrusted" value="false" />
+       <permission name="contact"/>
+       <permission name="call"/>
+       <permission name="location"/>
+       <permission name="camera"/>
+       <access origin="*"/>
+       <feature name="ajpush">
+       <param name="app_key" value="83f6332049b2b512cb99e6a7"/>
+       <param name="channel" value="developer-default"/>
+       </feature>
+	   <feature name="aMapLBS">
+       <param name="android_api_key" value="ccbb7037b33b8b7da76ac869f3385369"/>
+       <param name="ios_api_key" value="ccbb7037b33b8b7da76ac869f3385369"/>
+       </feature>
+	   <preference name="debug" value="true"/>
+</widget>
